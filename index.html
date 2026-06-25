@@ -923,7 +923,29 @@
       outline: 3px solid #fff;
       outline-offset: 3px;
     }
+.contact-brand-block {
+  display: flex;
+  flex-direction: column;   /* ✅ stack logo + text */
+  align-items: center;      /* ✅ center align */
+  justify-content: center;
+  height: 100%;             /* ✅ fill column */
+  text-align: center;
+}
 
+/* LOGO */
+.contact-brand-block img {
+  width: 120px;   /* ✅ BIG LOGO */
+  height: auto;
+  margin-bottom: 16px;
+}
+
+/* COMPANY NAME */
+.contact-brand-block h3 {
+  font-size: 28px;          /* ✅ BIG TEXT */
+  color: #ffffff;           /* ✅ WHITE */
+  font-weight: 700;
+  line-height: 1.2;
+}
     /* ===== FOOTER ===== */
     .site-footer {
       background: #050f09;
@@ -1096,31 +1118,7 @@
       html { scroll-behavior: auto; }
     }
 
-    .contact-brand {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: 40px;
-}
 
-/* Logo size */
-.contact-brand img {
-  width: 300px;   /* increase if needed */
-  height: auto;
-}
-
-/* Company name style */
-.contact-brand span {
-  font-size: 72px;        /* ✅ BIG text */
-  font-weight: 700;
-  color: #ffffff;         /* ✅ white text */
-  letter-spacing: 0.5px;
-}
-
-/* Optional: slightly lighter tone */
-.contact-brand span {
-  color: rgba(255,255,255,0.9);
-}
 
   </style>
 </head>
@@ -1657,11 +1655,11 @@ Ground Floor, GYAN ARPU Apartments, Medavakkam Tank Road, Kilpauk, Chennai - 600
               style="width:100%;border-radius:12px;margin-top:32px;opacity:0.25;"
             />
           </div>
-
-<div class="contact-brand">
-  <img src="Logo.png" alt="NES logo" />
-  <span>Nandi Enviro Systems</span>
+<div class="contact-brand-block">
+  <img src="Logo.png" alt="NES logo">
+  <h3>Nandi Enviro Systems</h3>
 </div>
+
 
          <!-- <div>
             <form class="contact-form" aria-label="Contact form" novalidate>
