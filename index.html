@@ -1095,6 +1095,33 @@
       }
       html { scroll-behavior: auto; }
     }
+
+    .contact-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+/* Logo size */
+.contact-brand img {
+  width: 80px;   /* increase if needed */
+  height: auto;
+}
+
+/* Company name style */
+.contact-brand span {
+  font-size: 28px;        /* ✅ BIG text */
+  font-weight: 700;
+  color: #ffffff;         /* ✅ white text */
+  letter-spacing: 0.5px;
+}
+
+/* Optional: slightly lighter tone */
+.contact-brand span {
+  color: rgba(255,255,255,0.9);
+}
+
   </style>
 </head>
 <body>
@@ -1602,21 +1629,22 @@ We are certified under a Quality Management System for the design, execution, op
                 <div class="contact-icon" aria-hidden="true">📍</div>
                 <div class="contact-item-body">
                   <h3>Office Location</h3>
-                  <p>Chennai, Tamil Nadu, India</p>
+                  <p>New No - 105/1A (Old No - 44/1A)
+Ground Floor, GYAN ARPU Apartments, Medavakkam Tank Road, Kilpauk, Chennai - 600010</p>
                 </div>
               </div>
               <div class="contact-item">
                 <div class="contact-icon" aria-hidden="true">✉️</div>
                 <div class="contact-item-body">
                   <h3>Email Us</h3>
-                  <p>info@nandienviro.com</p>
+                  <p>nandienviro@yahoo.com</p>
                 </div>
               </div>
               <div class="contact-item">
-                <div class="contact-icon" aria-hidden="true">🌐</div>
+                <div class="contact-icon" aria-hidden="true">📞</div>
                 <div class="contact-item-body">
-                  <h3>Industries Served</h3>
-                  <p>Automotive, Chemical, Dairy, Pharmaceuticals &amp; more</p>
+                  <h3>Contact</h3>
+                  <p>+91 - 98410 31222 / 98410 31444 / +044 - 42835029 / 48503063</p>
                 </div>
               </div>
             </address>
@@ -1629,12 +1657,12 @@ We are certified under a Quality Management System for the design, execution, op
               style="width:100%;border-radius:12px;margin-top:32px;opacity:0.25;"
             />
           </div>
-<div> 
-   <a href="#" class="nav-brand" aria-label="Nandi Enviro Systems – Home">
-          <img src="Logo.png" alt="NES logo" width="80" height="40" />
-          <span>Nandi Enviro Systems</span>
-        </a>
+
+<div class="contact-brand">
+  <img src="Logo.png" alt="NES logo" />
+  <span>Nandi Enviro Systems</span>
 </div>
+
          <!-- <div>
             <form class="contact-form" aria-label="Contact form" novalidate>
               <div class="form-row">
