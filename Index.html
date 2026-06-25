@@ -1,0 +1,1831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nandi Enviro Systems – Expert consultancy and turnkey solutions for water treatment, sewage treatment, industrial effluent treatment, and air pollution control." />
+  <title>Nandi Enviro Systems | Environmental Solutions</title>
+
+  <!-- Skip navigation for screen readers -->
+  <style>
+    /* ===== CSS RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --clr-primary:    #1a6b3c;
+      --clr-primary-dk: #0f4224;
+      --clr-primary-lt: #2d9955;
+      --clr-accent:     #f5a623;
+      --clr-text:       #1a1a1a;
+      --clr-text-lt:    #444;
+      --clr-bg:         #ffffff;
+      --clr-bg-alt:     #f4f9f6;
+      --clr-bg-dark:    #0f2d1e;
+      --clr-border:     #d4e8dc;
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,.08);
+      --shadow-md: 0 6px 24px rgba(0,0,0,.12);
+      --shadow-lg: 0 16px 48px rgba(0,0,0,.16);
+      --transition: 0.25s ease;
+      --max-w: 1200px;
+      --font-sans: 'Segoe UI', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--clr-text);
+      background: var(--clr-bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ===== SKIP LINK ===== */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--clr-primary);
+      color: #fff;
+      padding: 8px 16px;
+      font-weight: 600;
+      z-index: 9999;
+      border-radius: 0 0 var(--radius-sm) 0;
+      transition: top var(--transition);
+    }
+    .skip-link:focus {
+      top: 0;
+      outline: 3px solid var(--clr-accent);
+      outline-offset: 2px;
+    }
+
+    /* ===== FOCUS STYLES (accessibility) ===== */
+    :focus-visible {
+      outline: 3px solid var(--clr-accent);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    /* ===== NAVIGATION ===== */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--clr-border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--clr-primary-dk);
+    }
+
+    .nav-brand img {
+      height: 40px;
+      width: auto;
+    }
+
+    .nav-brand span { white-space: nowrap; }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      padding: 6px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--clr-text-lt);
+      transition: background var(--transition), color var(--transition);
+    }
+
+    .nav-links a:hover {
+      background: var(--clr-bg-alt);
+      color: var(--clr-primary);
+    }
+
+    .nav-cta {
+      background: var(--clr-primary) !important;
+      color: #fff !important;
+      padding: 8px 18px !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--clr-primary-dk) !important;
+    }
+
+    /* Hamburger */
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      color: var(--clr-text);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--clr-bg-dark);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0.35;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(15,66,36,0.92) 0%, rgba(26,107,60,0.65) 55%, rgba(10,35,22,0.88) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 80px 24px;
+      color: #fff;
+      width: 100%;
+    }
+
+    /* Two-column hero layout */
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .hero-left { }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--clr-accent);
+      flex-shrink: 0;
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 5.5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-title span { color: var(--clr-accent); }
+
+    .hero-desc {
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      max-width: 540px;
+      opacity: 0.85;
+      margin-bottom: 40px;
+      line-height: 1.75;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* Right stats panel */
+    .hero-right {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .hero-stat-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: var(--radius-md);
+      padding: 22px 18px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+      transition: background var(--transition), border-color var(--transition);
+    }
+
+    .hero-stat-card:hover {
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(245,166,35,0.4);
+    }
+
+    .hero-stat-wide {
+      grid-column: span 2;
+    }
+
+    .hero-stat-number {
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--clr-accent);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .hero-stat-icon {
+      font-size: 1.8rem;
+      margin-bottom: 6px;
+      line-height: 1;
+    }
+
+    .hero-stat-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.35;
+      letter-spacing: 0.02em;
+    }
+
+    @media (max-width: 900px) {
+      .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .hero-right {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .hero-stat-wide {
+        grid-column: span 1;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .hero-right {
+        grid-template-columns: 1fr 1fr;
+      }
+      .hero-stat-wide {
+        grid-column: span 2;
+      }
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all var(--transition);
+      border: 2px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--clr-accent);
+      color: #1a1a1a;
+    }
+
+    .btn-primary:hover {
+      background: #e8941a;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(245,166,35,0.4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: rgba(255,255,255,0.5);
+      color: #fff;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.15);
+      border-color: rgba(255,255,255,0.8);
+    }
+
+    /* ===== SECTION BASE ===== */
+    .section {
+      padding: 96px 24px;
+    }
+
+    .section-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--clr-primary);
+      background: rgba(26,107,60,0.08);
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      color: var(--clr-text);
+    }
+
+    .section-title span { color: var(--clr-primary); }
+
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--clr-text-lt);
+      max-width: 640px;
+      line-height: 1.7;
+    }
+
+    .section-header { margin-bottom: 56px; }
+
+    /* ===== ABOUT ===== */
+    .about { background: var(--clr-bg-alt); }
+
+    .about-grid {
+      display: grid;
+      gap: 56px;
+      align-items: start;
+    }
+
+    /* Two-column: text left, certificate right */
+    .about-two-col {
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+
+    .about-cert-col {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 8px;
+    }
+
+    .about-cert-img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 1px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--clr-border);
+    }
+
+    /* NES thumbnail row below columns */
+    .about-nes-row {
+      display: flex;
+      gap: 20px;
+      margin-top: 40px;
+      justify-content: center;
+    }
+
+    .about-nes-thumb {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px;
+     
+      flex-shrink: 0;
+    }
+
+    .about-text p {
+      margin-bottom: 20px;
+      color: var(--clr-text-lt);
+      font-size: 1.02rem;
+      line-height: 1.75;
+    }
+
+    .about-certs {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    .cert-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #fff;
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-md);
+      padding: 10px 16px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .cert-badge img {
+      height: 36px;
+      width: auto;
+    }
+
+    .cert-badge span {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--clr-text);
+    }
+
+    .about-images {
+      position: relative;
+    }
+
+    .about-img-main {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .about-img-main img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+    }
+
+    .about-img-float {
+      position: absolute;
+      bottom: -24px;
+      left: -24px;
+      width: 55%;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 4px solid #fff;
+      box-shadow: var(--shadow-md);
+    }
+
+    .about-img-float img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    /* ===== SERVICES ===== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+    }
+
+    .service-card {
+      background: #fff;
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .service-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .service-body {
+      padding: 28px;
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(26,107,60,0.1);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      font-size: 1.4rem;
+    }
+
+    .service-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--clr-text);
+    }
+
+    .service-desc {
+      font-size: 0.92rem;
+      color: var(--clr-text-lt);
+      line-height: 1.65;
+    }
+
+    /* ===== INDUSTRIES ===== */
+    .industries { background: var(--clr-bg-alt); }
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 20px;
+}
+    .industry-card {
+  background: #fff;
+  border: 1px solid #d4e8dc;
+  border-radius: 12px;
+  padding: 28px 16px;
+  text-align: center;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.industry-card:hover {
+  border-color: #1a6b3c;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 24px rgba(0,0,0,.12);
+}
+
+.industry-card img {
+  width: 110px !important;
+  height: 110px !important;
+  object-fit: contain;
+  margin: 0 auto 14px;
+  display: block;
+}
+
+.industry-card span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #444;
+  display: block;
+  line-height: 1.3;
+}
+
+    /* ===== GALLERY ===== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: 220px;
+      gap: 16px;
+    }
+
+    .gallery-item {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-item:nth-child(1) { grid-column: span 7; grid-row: span 2; }
+    .gallery-item:nth-child(2) { grid-column: span 5; }
+    .gallery-item:nth-child(3) { grid-column: span 5; }
+    .gallery-item:nth-child(4) { grid-column: span 4; grid-row: span 2; }
+    .gallery-item:nth-child(5) { grid-column: span 4; grid-row: span 2; }
+    .gallery-item:nth-child(6) { grid-column: span 4; }
+
+    /* ===== EQUIPMENT ===== */
+    .equipment { background: var(--clr-bg-dark); color: #fff; }
+
+    .equipment .section-title { color: #fff; }
+    .equipment .section-sub { color: rgba(255,255,255,0.7); }
+    .equipment .section-label { color: var(--clr-accent); background: rgba(245,166,35,0.15); }
+
+    .equipment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .equip-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: all var(--transition);
+    }
+
+    .equip-card:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.25);
+    }
+
+    .equip-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .equip-body {
+      padding: 20px;
+    }
+
+    .equip-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .equip-desc {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.55;
+    }
+
+    /* ===== LEADERSHIP ===== */
+  .leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.leader-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.leader-img-wrap {
+  height: 260px;
+  overflow: hidden;
+  position: relative;
+  background: #f4f9f6;
+  flex-shrink: 0;
+}
+
+.leader-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.leader-img-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(transparent, rgba(15,45,30,0.5));
+}
+
+.leader-body {
+  padding: 20px;
+  flex: 1;
+}
+
+.leader-role {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #1a6b3c;
+  margin-bottom: 6px;
+}
+
+.leader-name {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.leader-bio {
+  font-size: 0.92rem;
+  color: #444;
+  line-height: 1.65;
+}
+
+    /* ===== CERTIFICATIONS ===== */
+    .certifications { }
+
+    .certs-flex {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cert-item {
+      background: var(--clr-bg-alt);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-md);
+      padding: 20px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition);
+      min-width: 160px;
+    }
+
+    .cert-item:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+
+    .cert-item img {
+      height: 60px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact { background: var(--clr-bg-dark); color: #fff; }
+
+    .contact .section-title { color: #fff; }
+    .contact .section-sub  { color: rgba(255,255,255,0.7); }
+    .contact .section-label { color: var(--clr-accent); background: rgba(245,166,35,0.15); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .contact-info { }
+
+    .contact-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 28px;
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(255,255,255,0.08);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .contact-item-body h3 {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+
+    .contact-item-body p {
+      color: #fff;
+      font-size: 0.98rem;
+    }
+
+    .contact-form {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      color: #fff;
+      font-size: 0.95rem;
+      font-family: inherit;
+      transition: border-color var(--transition);
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: rgba(255,255,255,0.35);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--clr-accent);
+      outline: none;
+      background: rgba(255,255,255,0.1);
+    }
+
+    .form-group select option {
+      background: var(--clr-bg-dark);
+      color: #fff;
+    }
+
+    .form-group textarea { resize: vertical; min-height: 110px; }
+
+    .btn-submit {
+      width: 100%;
+      background: var(--clr-accent);
+      color: #1a1a1a;
+      border: none;
+      padding: 14px 24px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all var(--transition);
+      font-family: inherit;
+    }
+
+    .btn-submit:hover {
+      background: #e8941a;
+      transform: translateY(-2px);
+    }
+
+    .btn-submit:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: 3px;
+    }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      background: #050f09;
+      color: rgba(255,255,255,0.6);
+      padding: 48px 24px 24px;
+    }
+
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+     
+      margin-bottom: 2px;
+      padding-bottom: 2px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .footer-brand img { height: 44px; margin-bottom: 16px; }
+
+    .footer-brand p {
+      font-size: 0.88rem;
+      line-height: 1.65;
+      max-width: 280px;
+    }
+
+    .footer-col h3 {
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .footer-col ul { list-style: none; }
+
+    .footer-col li { margin-bottom: 8px; }
+
+    .footer-col a {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.55);
+      transition: color var(--transition);
+    }
+
+    .footer-col a:hover { color: var(--clr-accent); }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.82rem;
+    }
+
+    .footer-bottom a:hover { color: var(--clr-accent); }
+
+    /* ===== CLIENTS STRIP ===== */
+    .clients-section { background: #fff; }
+
+    .clients-strip {
+      display: flex;
+      gap: 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .clients-strip::before,
+    .clients-strip::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 80px;
+      z-index: 2;
+    }
+    .clients-strip::before { left: 0; background: linear-gradient(to right, #fff, transparent); }
+    .clients-strip::after  { right: 0; background: linear-gradient(to left, #fff, transparent); }
+
+    .clients-track {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      animation: scroll-clients 30s linear infinite;
+      white-space: nowrap;
+    }
+
+    .clients-track:hover { animation-play-state: paused; }
+
+    @keyframes scroll-clients {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    .client-logo {
+      height: 52px;
+      width: auto;
+      object-fit: contain;
+      filter: grayscale(100%);
+      opacity: 0.5;
+      transition: all var(--transition);
+      flex-shrink: 0;
+    }
+
+    .client-logo:hover { filter: none; opacity: 1; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .about-two-col { grid-template-columns: 1fr; }
+      .about-cert-col { justify-content: flex-start; }
+      .about-nes-row { gap: 12px; }
+      .about-nes-thumb { width: 140px; height: 100px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+
+      .footer-top { grid-template-columns: 1fr 1fr; }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 200px;
+      }
+      .gallery-item:nth-child(n) {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
+      .gallery-item:nth-child(1) { grid-column: span 2; }
+    }
+
+    @media (max-width: 1100px) {
+      /* Tools section: wrap to 3 cols on medium screens */
+      .equipment .section-inner > div[style*="repeat(5"] {
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .section { padding: 64px 16px; }
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+
+      .form-row { grid-template-columns: 1fr; }
+
+      .footer-top { grid-template-columns: 1fr; gap: 28px; }
+
+      .hero-stats { gap: 24px; }
+    }
+
+    /* ===== UTILITY ===== */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Skip navigation -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header role="banner">
+    <nav class="site-nav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="#" class="nav-brand" aria-label="Nandi Enviro Systems – Home">
+          <img src="nes_images_png/Logo.png" alt="NES logo" width="80" height="40" />
+          <span>Nandi Enviro Systems</span>
+        </a>
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+
+        <ul class="nav-links" id="nav-menu" role="list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#industries">Industries</a></li>
+          <li><a href="#gallery">Projects</a></li>
+          <li><a href="#leadership">Team</a></li>
+          <li><a href="#contact" class="btn nav-cta">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <div class="hero-layout">
+
+          <!-- LEFT: Main messaging -->
+          <div class="hero-left">
+            <div class="hero-badge" aria-label="Established 2002">
+              Established 2002 &nbsp;·&nbsp; ISO Certified
+            </div>
+
+            <h1 class="hero-title" id="hero-heading">
+              Protecting the<br/><span>Environment</span>,<br/>Empowering Industry
+            </h1>
+
+            <p class="hero-desc">
+              Expert consultancy and turnkey solutions for water treatment, sewage systems,
+              industrial effluent management, and air pollution control —
+              trusted across India for over two decades.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#services" class="btn btn-primary">
+                Explore Services
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="#contact" class="btn btn-outline">Get a Consultation</a>
+            </div>
+          </div>
+
+          <!-- RIGHT: Stats panel -->
+          <div class="hero-right" aria-label="Company highlights">
+            <div class="hero-stat-card">
+              <div class="hero-stat-number">20+</div>
+              <div class="hero-stat-label">Years of Expertise</div>
+            </div>
+            <div class="hero-stat-card">
+              <div class="hero-stat-number">18+</div>
+              <div class="hero-stat-label">Industries Served</div>
+            </div>
+            <div class="hero-stat-card">
+              <div class="hero-stat-icon">💧</div>
+              <div class="hero-stat-label">Effluent Treatment Plants</div>
+            </div>
+            <div class="hero-stat-card">
+              <div class="hero-stat-icon">🌿</div>
+              <div class="hero-stat-label">Sewage Treatment Plants</div>
+            </div>
+            <div class="hero-stat-card hero-stat-wide">
+              <div class="hero-stat-icon">🏭</div>
+              <div class="hero-stat-label">Air Pollution Control Systems</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about" aria-labelledby="about-heading">
+      <div class="section-inner">
+        <div class="about-grid about-two-col">
+          <div class="about-text">
+            <div class="section-header">
+              <span class="section-label" aria-hidden="true">About NES</span>
+              <h2 class="section-title" id="about-heading">
+                Two Decades of <span>Environmental Excellence</span>
+              </h2>
+           Founded in 2002, Nandi Enviro Systems is a leading consultant and turnkey provider of industrial wastewater, sewage treatment, and air pollution control solutions.. <br> <br>
+                Our services include in-plant surveys, effluent analysis, flow measurements, and design of optimal treatment systems, along with detailed layouts and cost estimates. We also support regulatory approvals, ensuring smooth compliance with Pollution Control Board requirements. <br> <br>
+           
+We are certified under a Quality Management System for the design, execution, operation, and maintenance of wastewater, sewage, and air pollution control systems.
+           
+  </div>
+<!-- NES1, NES2, NES3 as small images in a row below the columns -->
+        <div class="about-nes-row">
+          <img src="nes_images_png/NES1.png" alt="NES facility photo 1" loading="lazy" class="about-nes-thumb"/>
+          <img src="nes_images_png/NES2.png" alt="NES facility photo 2" loading="lazy" class="about-nes-thumb"/>
+          <img src="nes_images_png/NES3.png" alt="NES facility photo 3" loading="lazy" class="about-nes-thumb"/>
+        </div>
+           <!-- <div class="about-certs" role="list" aria-label="Certifications">
+              <div class="cert-badge" role="listitem">
+                <img src="nes_images_png/img_p0_36.png" alt="ISO certification logo" width="36" height="36" />
+                <span>ISO Certified</span>
+              </div>
+              <div class="cert-badge" role="listitem">
+                <img src="nes_images_png/img_p0_37.png" alt="Quality management certification" width="36" height="36" />
+                <span>Quality Assured</span>
+              </div>
+              <div class="cert-badge" role="listitem">
+                <span style="font-size:1.5rem;" aria-hidden="true">🌿</span>
+                <span>PCB Approved</span>
+              </div>
+            </div>-->
+          </div>
+
+          <!-- Right column: Certificate image only -->
+          <div class="about-cert-col">
+            <img src="nes_images_png/Certificate.png" alt="NES ISO Certificate" loading="lazy" class="about-cert-img"/>
+          </div>
+        </div>
+
+        
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services" aria-labelledby="services-heading">
+      <div class="section-inner">
+        <header class="section-header" style="text-align:center;">
+          <span class="section-label" aria-hidden="true">What We Do</span>
+          <h2 class="section-title" id="services-heading">Our <span>Core Services</span></h2>
+          <p class="section-sub" style="margin:0 auto;">
+            End-to-end environmental engineering services — from initial assessment to full plant commissioning.
+          </p>
+        </header>
+
+        <div class="services-grid" role="list">
+
+          <article class="service-card" role="listitem">
+            <div class="service-body">
+              <div class="service-icon" aria-hidden="true">💧</div>
+              <h3 class="service-title">Consultancy Services</h3>
+              <p class="service-desc">
+                Expert consultancy for water, sewage, and industrial effluent treatment.
+                In-plant surveys, effluent analysis, feasibility reports, and full
+                Pollution Control Board approval support.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-card" role="listitem">
+            <div class="service-body">
+              <div class="service-icon" aria-hidden="true">🏭</div>
+              <h3 class="service-title">Turnkey Execution</h3>
+              <p class="service-desc">
+                Complete project delivery from on-site survey to final commissioning.
+                We handle design, procurement, construction, and clearances from
+                Pollution Control Boards.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-card" role="listitem">
+            <div class="service-body">
+              <div class="service-icon" aria-hidden="true">📋</div>
+              <h3 class="service-title">Environmental Impact Assessment</h3>
+              <p class="service-desc">
+                Comprehensive EIA studies for proposed projects and expansion of existing
+                Schedule I industries per MOEF EIA Notification 1994. Public hearing
+                guidance and Environmental Clearance support.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-card" role="listitem">
+            <div class="service-body">
+              <div class="service-icon" aria-hidden="true">⚗️</div>
+              <h3 class="service-title">Hazardous Waste Management</h3>
+              <p class="service-desc">
+                Consultancy for hazardous waste storage and disposal as per MOEF,
+                New Delhi guidelines. Covering service stations, hotels, industries,
+                construction, and healthcare sectors.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section class="section industries" id="industries" aria-labelledby="industries-heading">
+      <div class="section-inner">
+        <header class="section-header" style="text-align:center;">
+          <span class="section-label" aria-hidden="true">Sectors We Serve</span>
+          <h2 class="section-title" id="industries-heading">Industries <span>We Serve</span></h2>
+          <p class="section-sub" style="margin:0 auto;">
+            Trusted by clients across 18+ industry sectors — from automotive to vegetable oil refineries.
+          </p>
+        </header>
+
+       <div class="industries-grid" role="list" aria-label="Industries served by NES">
+  <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_10.png" alt="Automotive industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span></span>
+  </div>
+  <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_12.png" alt="Chemical industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span></span>
+  </div>
+  <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_14.png" alt="Dairy industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span></span>
+  </div>
+  <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_16.png" alt="Food processing industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span> </span>
+  </div>
+  <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_18.png" alt="Hospitality industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span></span>
+  </div>
+  <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_20.png" alt="Metal products industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span> </span>
+  </div>
+  <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_22.png" alt="Printed circuit boards industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span>  </span>
+  </div>
+  <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_24.png" alt="Pulp and paper industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span> </span>
+  </div>
+  <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_26.png" alt="Pharmaceuticals industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span></span>
+  </div>
+  <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_27.png" alt="Rubber industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span></span>
+  </div>
+  <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_29.png" alt="Surgical cotton industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span> </span>
+  </div>
+  <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_31.png" alt="Textiles industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span></span>
+  </div>
+  <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_32.png" alt="Tanneries industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span></span>
+  </div>
+  <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_34.png" alt="Tire manufacturing industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span> </span>
+  </div>
+  <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_36.png" alt="Vegetable oil industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span> </span>
+  </div>
+  <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_37.png" alt="Healthcare industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span></span>
+  </div>
+  <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_39.png" alt="Construction industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span></span>
+  </div>
+  <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_41.png" alt="Service stations industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span> </span>
+  </div>
+ <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_45.png" alt="Service stations industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span> </span>
+  </div>
+ <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_43.png" alt="Service stations industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span> </span>
+  </div>
+ <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_47.png" alt="Service stations industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span> </span>
+  </div>
+ <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_49.png" alt="Service stations industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span> </span>
+  </div>
+ <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_51.png" alt="Service stations industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span> </span>
+  </div>
+ <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_53.png" alt="Service stations industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span> </span>
+  </div>
+ <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_55.png" alt="Service stations industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span> </span>
+  </div>
+ <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_57.png" alt="Service stations industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span> </span>
+  </div>
+ <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_59.png" alt="Service stations industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span> </span>
+  </div>
+ <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_61.png" alt="Service stations industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span> </span>
+  </div>
+ <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_63.png" alt="Service stations industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span> </span>
+  </div>
+ <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_65.png" alt="Service stations industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span> </span>
+  </div>
+ <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_67.png" alt="Service stations industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span> </span>
+  </div>
+ <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_69.png" alt="Service stations industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span> </span>
+  </div>
+ <div class="industry-card" role="listitem">
+    <img src="nes_images_png/img_p0_71.png" alt="Service stations industry" width="110" height="110" loading="lazy" aria-hidden="true"/>
+    <span> </span>
+  </div>
+</div>
+      </div>
+    </section>
+
+    <!-- EQUIPMENT / TOOLS -->
+    <section class="section equipment" id="equipment" aria-labelledby="equipment-heading">
+      <div class="section-inner">
+        <header class="section-header" style="text-align:center;">
+          <span class="section-label" aria-hidden="true">Our Tools</span>
+          <h2 class="section-title" id="equipment-heading">Advanced <span style="color:var(--clr-accent)">Assessment Equipment</span></h2>
+          <p class="section-sub" style="margin:0 auto;">Precision instruments for accurate environmental assessments in line with national standards.</p>
+        </header>
+        <div style="display:grid; grid-template-columns: repeat(5, 1fr); gap:16px; margin-top:0;">
+          <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:20px;">
+            <div style="font-size:2rem;margin-bottom:12px;">🌫️</div>
+            <h3 style="color:#fff;font-size:1.05rem;margin-bottom:12px;">Air &amp; Emission Monitoring</h3>
+                  <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;line-height:1.7;list-style:disc;">
+   Ensuring air quality compliance through advanced monitoring and emission analysis.
+            </p>
+          </div>
+          <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:20px;">
+            <div style="font-size:2rem;margin-bottom:12px;">🔊</div>
+            <h3 style="color:#fff;font-size:1.05rem;margin-bottom:12px;">Noise &amp; Workplace Environment</h3>
+                 <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;line-height:1.7;list-style:disc;">
+        Maintaining safe and compliant workplace conditions through noise and lighting assessments.
+            </p>
+          </div>
+          <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:20px;">
+            <div style="font-size:2rem;margin-bottom:12px;">🧪</div>
+            <h3 style="color:#fff;font-size:1.05rem;margin-bottom:12px;">Chemical Exposure &amp; VOC Analysis</h3>
+                 <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;line-height:1.7;list-style:disc;">
+            Evaluating workplace exposure risks through monitoring and analysis, alignment with regulations.
+            </p>
+          </div>
+          <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:20px;">
+            <div style="font-size:2rem;margin-bottom:12px;">💧</div>
+            <h3 style="color:#fff;font-size:1.05rem;margin-bottom:12px;">Water &amp; Waste Management</h3>
+                 <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;line-height:1.7;list-style:disc;">
+              Delivering accurate water and waste analysis for environmental safety and compliance.
+            </p>
+          </div>
+          <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:20px;">
+            <div style="font-size:2rem;margin-bottom:12px;">🌱</div>
+            <h3 style="color:#fff;font-size:1.05rem;margin-bottom:12px;">Soil <br> Analysis</h3>
+            <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;line-height:1.7;list-style:disc;">
+            Providing soil testing and analysis to support engineering requirements and environmental planning.
+           </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP -->
+    <section class="section leadership" id="leadership" aria-labelledby="leadership-heading">
+      <div class="section-inner">
+        <header class="section-header" style="text-align:center;">
+          <span class="section-label" aria-hidden="true">Meet the Team</span>
+          <h2 class="section-title" id="leadership-heading">Leadership &amp; <span>Expertise</span></h2>
+          <p class="section-sub" style="margin:0 auto;">
+            Led by a highly qualified team with decades of technical and administrative experience
+            in environmental engineering.
+          </p>
+        </header>
+
+       <div class="leadership-grid">
+
+  <article class="leader-card">
+    <div class="leader-img-wrap">
+      <img src="nes_images_png/Amuthan.png" alt="V.S. Amuthan, CEO" loading="lazy" />
+      <div class="leader-img-overlay"></div>
+    </div>
+    <div class="leader-body">
+      <p class="leader-role">Chief Executive Officer</p>
+      <h3 class="leader-name">V.S. Amuthan</h3>
+      <p class="leader-bio">
+        Holds a B.E. in Civil Engineering from Madras University with an elective in Environmental
+        Engineering and Industrial Wastewater Treatment. With nearly 32 years of experience in
+        design, execution, commissioning, and monitoring of industrial effluent treatment plants,
+        Mr. Amuthan brings unparalleled expertise to every project.
+      </p>
+      <p class="leader-bio" style="margin-top:10px;">
+        Previously served as Senior Engineer at Kirloskar Consultants and Project Manager
+        at Tech Sharp Enviro Systems.
+      </p>
+    </div>
+  </article>
+
+  <article class="leader-card">
+    <div class="leader-img-wrap">
+      <img src="nes_images_png/Kavitha.png" alt="S. Kavitha, Pioneer & Co-Founder" loading="lazy" />
+      <div class="leader-img-overlay"></div>
+    </div>
+    <div class="leader-body">
+      <p class="leader-role">Pioneer &amp; Co-Founder</p>
+      <h3 class="leader-name">S. Kavitha</h3>
+      <p class="leader-bio">
+        A pioneer in the field of environmental solutions, S. Kavitha co-founded Nandi Enviro
+        Systems in 2002 alongside Mr. V.S. Amuthan. Together they have established a strong
+        foundation in environmental engineering, serving clients across diverse industries
+        throughout South India and beyond.
+      </p>
+      <p class="leader-bio" style="margin-top:10px;">
+        Previously served as Assistant Engineer at Chennai Corporation, bringing deep
+        municipal and industrial expertise to the company.
+      </p>
+    </div>
+  </article>
+
+  <article class="leader-card">
+    <div class="leader-img-wrap">
+      <img src="nes_images_png/Team.png" alt="The NES Team" loading="lazy" />
+    </div>
+    <div class="leader-body">
+      <p class="leader-role">Our People</p>
+      <h3 class="leader-name">The NES Team</h3>
+      <p class="leader-bio">
+        A dedicated group of environmental engineers and technical specialists committed
+        to delivering effective, sustainable solutions across every project.
+      </p>
+    </div>
+  </article>
+
+</div>
+
+        <!-- Team gallery
+        <div style="margin-top:56px;">
+          <h3 style="text-align:center; margin-bottom:28px; font-size:1.15rem; color:var(--clr-text-lt);">The NES Team</h3>
+          <div style="margin-top:40px; text-align:center;">
+            <img src="nes_images_png/Team.png" alt="The NES Team" loading="lazy" style="width:100%; max-width:900px; border-radius:16px; box-shadow:var(--shadow-lg); margin:0 auto;"/>
+          </div>
+        </div>
+      </div> -->
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact" aria-labelledby="contact-heading">
+      <div class="section-inner">
+        <div class="contact-grid">
+          <div>
+            <span class="section-label" aria-hidden="true">Get in Touch</span>
+            <h2 class="section-title" id="contact-heading" style="color:#fff;">
+              Ready to Start Your <span style="color:var(--clr-accent)">Project?</span>
+            </h2>
+            <p class="section-sub" style="margin-bottom:48px;">
+              Contact our team of environmental engineers for a consultation on your water treatment,
+              effluent management, or pollution control needs.
+            </p>
+
+            <address style="font-style:normal;">
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">📍</div>
+                <div class="contact-item-body">
+                  <h3>Office Location</h3>
+                  <p>Chennai, Tamil Nadu, India</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">✉️</div>
+                <div class="contact-item-body">
+                  <h3>Email Us</h3>
+                  <p>info@nandienviro.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">🌐</div>
+                <div class="contact-item-body">
+                  <h3>Industries Served</h3>
+                  <p>Automotive, Chemical, Dairy, Pharmaceuticals &amp; more</p>
+                </div>
+              </div>
+            </address>
+
+            <img
+              src="nes_images_png/img_p0_2.png"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              style="width:100%;border-radius:12px;margin-top:32px;opacity:0.25;"
+            />
+          </div>
+
+          <div>
+            <form class="contact-form" aria-label="Contact form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name">Full Name <span aria-label="required">*</span></label>
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    placeholder="Your full name"
+                    required
+                    autocomplete="name"
+                    aria-required="true"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="contact-company">Company</label>
+                  <input
+                    type="text"
+                    id="contact-company"
+                    name="company"
+                    placeholder="Your company"
+                    autocomplete="organization"
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-email">Email Address <span aria-label="required">*</span></label>
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    placeholder="you@company.com"
+                    required
+                    autocomplete="email"
+                    aria-required="true"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="contact-phone">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="contact-phone"
+                    name="phone"
+                    placeholder="+91 XXXXX XXXXX"
+                    autocomplete="tel"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-service">Service Required</label>
+                <select id="contact-service" name="service">
+                  <option value="" disabled selected>Select a service</option>
+                  <option value="consultancy">Consultancy Services</option>
+                  <option value="turnkey">Turnkey Execution</option>
+                  <option value="eia">Environmental Impact Assessment</option>
+                  <option value="hazardous">Hazardous Waste Management</option>
+                  <option value="air">Air Pollution Control</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message <span aria-label="required">*</span></label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  placeholder="Describe your project or requirements..."
+                  required
+                  aria-required="true"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit">
+                Send Message &rarr;
+              </button>
+
+              <p style="font-size:0.8rem; color:rgba(255,255,255,0.4); margin-top:12px; text-align:center;">
+                Fields marked * are required. We'll respond within 1–2 business days.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+
+      <div class="footer-top">
+        <div class="footer-brand">
+          <!-- brand content removed -->
+        </div>
+       
+        <div class="footer-col">
+         <!--  <h3>Industries</h3>
+          <ul>
+            <li><a href="#industries">Automotive</a></li>
+            <li><a href="#industries">Pharmaceuticals</a></li>
+            <li><a href="#industries">Textiles</a></li>
+            <li><a href="#industries">Food Processing</a></li>
+            <li><a href="#industries">View All →</a></li>
+          </ul>
+        </div> 
+ <div class="footer-col">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#services">Consultancy</a></li>
+            <li><a href="#services">Turnkey Execution</a></li>
+            <li><a href="#services">EIA Studies</a></li>
+            <li><a href="#services">Hazardous Waste</a></li>
+            <li><a href="#services">Air Pollution Control</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#about">About NES</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+            <li><a href="#gallery">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>-->
+        </div>
+      </div> 
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Nandi Enviro Systems. All rights reserved.</p>
+        <p>Established 2002 &nbsp;·&nbsp; Chennai, India &nbsp;·&nbsp; ISO Certified</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const menu   = document.getElementById('nav-menu');
+    toggle?.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      menu.style.display = open ? '' : 'flex';
+      menu.style.flexDirection = 'column';
+      menu.style.position = 'absolute';
+      menu.style.top = '64px';
+      menu.style.left = '0';
+      menu.style.right = '0';
+      menu.style.background = '#fff';
+      menu.style.padding = '16px 24px';
+      menu.style.borderBottom = '1px solid #d4e8dc';
+      menu.style.boxShadow = '0 6px 24px rgba(0,0,0,.12)';
+      if (open) { menu.removeAttribute('style'); }
+    });
+
+    // Close mobile menu on link click
+    menu?.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        menu.removeAttribute('style');
+      });
+    });
+
+    // Simple contact form validation feedback
+    document.querySelector('.contact-form')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = e.target.querySelector('.btn-submit');
+      btn.textContent = 'Message Sent! ✓';
+      btn.style.background = '#22c55e';
+      btn.disabled = true;
+    });
+
+    // Lazy-load animation for section headers
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.service-card, .industry-card, .equip-card, .leader-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(el);
+      });
+    }
+  </script>
+
+</body>
+</html>
