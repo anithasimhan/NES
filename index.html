@@ -287,7 +287,99 @@
   .cert-item:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
   .cert-item img { height: 60px; width: auto; object-fit: contain; }
 
-  /* ===== CONTACT ===== */
+
+  .contact { background: var(--clr-primary); padding: 80px 24px; }
+ 
+.contact .section-inner { max-width: 1060px; margin: 0 auto; }
+ 
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+ 
+/* LEFT */
+.contact-left { padding-right: 20px; }
+ 
+.contact-left .section-label {
+  display: inline-block;
+  background: rgba(255,255,255,0.22);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+ 
+.contact-left .section-title {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+ 
+.contact-left .section-sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.75;
+}
+ 
+/* RIGHT */
+.contact-right {
+  border-left: 1px solid rgba(255,255,255,0.25);
+  padding-left: 64px;
+}
+ 
+.contact-right address {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+ 
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+ 
+.contact-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  width: 28px;
+  text-align: center;
+}
+ 
+.contact-item-body h3 {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 6px;
+}
+ 
+.contact-item-body p {
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.7;
+  font-weight: 500;
+}
+ 
+.contact-item-body a { color: #fff; }
+ 
+@media (max-width: 768px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .contact-left { padding-right: 0; }
+  .contact-right { border-left: none; border-top: 1px solid rgba(255,255,255,0.25); padding-left: 0; padding-top: 40px; }
+}
+  /* ===== CONTACT ===== 
   .contact { background: var(--clr-primary); }
   .contact .section-title { color: #fff; }
   .contact .section-sub { color: rgba(255,255,255,0.85); }
@@ -308,7 +400,7 @@
   .contact-item-body a { color: rgba(255,255,255,0.9); }
   .contact-brand-block { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; text-align: center; }
   .contact-brand-block img { width: 120px; height: auto; margin-bottom: 16px; }
-  .contact-brand-block h3 { font-size: 28px; color: #fff; font-weight: 700; line-height: 1.2; }
+  .contact-brand-block h3 { font-size: 28px; color: #fff; font-weight: 700; line-height: 1.2; } */
 
   /* ===== FOOTER ===== */
   .site-footer {
@@ -877,25 +969,26 @@ We are certified under a Quality Management System for the design, execution, op
       </div> -->
     </section>
 
-    <!-- CONTACT -->
+ct section · HTML
+<!-- CONTACT -->
 <section class="section contact" id="contact" aria-labelledby="contact-heading">
   <div class="section-inner">
     <div class="contact-grid">
  
-      <!-- LEFT: heading and intro -->
+      <!-- LEFT -->
       <div class="contact-left">
-        <span class="section-label" aria-hidden="true" style="display:inline-block; width:160px;">Get in Touch</span>
-        <h2 class="section-title" id="contact-heading" style="color:#fff;">
+        <span class="section-label" aria-hidden="true">Get in Touch</span>
+        <h2 class="section-title" id="contact-heading">
           Ready to Start Your <span style="color:var(--clr-accent)">Project?</span>
         </h2>
         <p class="section-sub">
-          Contact our team of environmental engineers for a consultation on your water treatment,
-          effluent management, or pollution control needs.
+          Contact our team of environmental engineers for a consultation on your
+          water treatment, effluent management, or pollution control needs.
         </p>
       </div>
  
-      <!-- RIGHT: contact details -->
-      <div class="contact-right" style="padding-left: 100px; width: 100%;">
+      <!-- RIGHT -->
+      <div class="contact-right">
         <address style="font-style:normal;">
  
           <div class="contact-item">
