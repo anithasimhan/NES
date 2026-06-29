@@ -79,12 +79,16 @@
 
    /* ===== NAVIGATION ===== */
 .site-nav {
-
-position: sticky;
+ position: fixed;
   top: 0;
-  background: transparent;   /* ✅ remove white strip */
-  border-bottom: none;       /* ✅ remove line */
-  box-shadow: none;  
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--clr-border);
+  box-shadow: var(--shadow-sm);
 
 }
 .nav-inner {
@@ -1132,7 +1136,14 @@ position: sticky;
       }
       html { scroll-behavior: auto; }
     }
-
+body {
+  font-family: var(--font-sans);
+  color: var(--clr-text);
+  background: var(--clr-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  padding-top: 64px; /* ← add this line */
+}
 
 
   </style>
