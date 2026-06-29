@@ -962,14 +962,15 @@ position: sticky;
 }
     /* ===== FOOTER ===== */
     .site-footer {
-      background: #050f09;
-      color: rgba(255,255,255,0.6);
-      padding: 48px 24px 24px;
+     background: var(--clr-primary-dk); /* matches your dark green contact section */
+  color: rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .footer-inner {
-      max-width: var(--max-w);
-      margin: 0 auto;
+     max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
     }
 
     .footer-top {
@@ -1011,12 +1012,12 @@ position: sticky;
     .footer-col a:hover { color: var(--clr-accent); }
 
     .footer-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      font-size: 0.82rem;
+      padding: 24px 0;
+  text-align: center;
+  font-size: 0.82rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
     }
 
     .footer-bottom a:hover { color: var(--clr-accent); }
