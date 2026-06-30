@@ -8,6 +8,8 @@
 
   <!-- Skip navigation for screen readers -->
 <style>
+
+  .hamburger { display: none; }
   /* ===== CSS RESET & BASE ===== */
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -371,9 +373,159 @@
   line-height: 1.7;
   font-weight: 500;
 }
- 
+ .nav-link.active {
+  color: #1a6b3c;
+  font-weight: 700;
+}
+
+.nav-link.active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #1a6b3c;
+  margin-top: 2px;
+  border-radius: 2px;
+}
 .contact-item-body a { color: #fff; }
- 
+ /* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  /* NAV */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 16px 24px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.1);
+    gap: 4px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+  }
+
+  .nav-cta { display: none; }
+
+  /* HAMBURGER BUTTON */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #1a6b3c;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* HERO */
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-right {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-stat-wide {
+    grid-column: span 2;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  /* ABOUT */
+  .about-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .about-nes-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about-nes-thumb {
+    width: 140px;
+    height: 100px;
+  }
+
+  /* SERVICES */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* INDUSTRIES */
+  .industries-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* LEADERSHIP */
+  .leadership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* TOOLS */
+  .equipment .section-inner > div {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* FOOTER */
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-right {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .equipment .section-inner > div {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
 @media (max-width: 768px) {
   .contact-grid { grid-template-columns: 1fr; gap: 48px; }
   .contact-left { padding-right: 0; }
@@ -1073,6 +1225,23 @@ We are certified under a Quality Management System for the design, execution, op
   </footer>
 
   <script>
+
+    // Hamburger menu toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  navLinks.classList.toggle('open');
+});
+
+// Close menu when a link is clicked
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    navLinks.classList.remove('open');
+  });
+});
     // Mobile nav toggle
     const toggle = document.querySelector('.nav-toggle');
     const menu   = document.getElementById('nav-menu');
@@ -1128,6 +1297,36 @@ We are certified under a Quality Management System for the design, execution, op
         observer.observe(el);
       });
     }
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Highlight on click
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+  });
+});
+
+// Highlight on scroll
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100;
+    if (window.scrollY >= sectionTop) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${current}`) {
+      link.classList.add('active');
+    }
+  });
+});
+
+    
   </script>
 
 </body>
